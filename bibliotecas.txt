@@ -1,0 +1,10 @@
+python -m venv venv
+
+Set-ExecutionPolicy AllSigned (Este comando no powershell como admin, se necessário)
+
+python -m pip install --upgrade pip wheel setuptools
+pip install Flask Flask-Bcrypt python-dotenv requests opencv-python pymysql pandas pyarrow numpy openpyxl elementpath ttkbootstrap xmltodict tqdm lxml pyautogui Pillow pygetwindow PyPDF2 beautifulsoup4
+
+
+
+pip install beautifulsoup4 requests telebot

@@ -1,0 +1,10 @@
+#Ignorando Pastas
+venv/
+__pycache__/
+build/
+dist/
+.pytest_cache/
+*.spec
+
+#Ignorando Arquivos
+.env
