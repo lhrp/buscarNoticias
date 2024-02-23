@@ -8,3 +8,4 @@ dist/
 
 #Ignorando Arquivos
 .env
+buscaConteudoLocal.py

@@ -1,12 +1,19 @@
-import time
+import time, os
 from selenium import webdriver
 from selenium.webdriver.edge.options import Options
 import telebot
 from bs4 import BeautifulSoup
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv())
+
+TOKEN = os.environ.get("TOKEN")
+USERID = os.environ.get("USERID")
 
 # Configurando o bot do Telegram
-TOKEN = '5354237813:AAG5C7CglIyaGddlNfjmIbJOCs2Zr2gE48M'
+
 bot = telebot.TeleBot(TOKEN)
+
+
 
 # Configurando o Selenium
 chrome_options = Options()
@@ -36,7 +43,7 @@ def enviar_noticias():
     for titulo, link in noticias:
         mensagem = f"{titulo}\n{link}"
         print(mensagem)
-        bot.send_message('643003849', mensagem)  # Substitua 'seu_id_telegram' pelo seu ID do Telegram
+        bot.send_message(USERID, mensagem)  # Substitua 'seu_id_telegram' pelo seu ID do Telegram
         time.sleep(1)  # Espera para não sobrecarregar o envio de mensagens
 
 # # Agendamento para enviar notícias duas vezes ao dia

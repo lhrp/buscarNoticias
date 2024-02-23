@@ -7,4 +7,4 @@ pip install Flask Flask-Bcrypt python-dotenv requests opencv-python pymysql pand
 
 
 
-pip install beautifulsoup4 requests telebot
+pip install beautifulsoup4 requests telebot PyPDF2 python-dotenv reportlab

@@ -1,8 +1,10 @@
-import requests, bs4, telebot, time
+import requests, bs4, telebot, time, os
 
 
 # Configurando o bot do Telegram
-TOKEN = '5354237813:AAG5C7CglIyaGddlNfjmIbJOCs2Zr2gE48M'
+
+TOKEN = os.environ.get("TOKEN")
+USERID = os.environ.get("USERID")
 bot = telebot.TeleBot(TOKEN)
 
 
@@ -31,7 +33,7 @@ def enviar_noticias():
     for titulo, link in noticias:
             mensagem = f"{titulo}\n{link}"
             print(mensagem)
-            bot.send_message('643003849', mensagem)  # Substitua 'seu_id_telegram' pelo seu ID do Telegram
+            bot.send_message(USERID, mensagem)  # Substitua 'seu_id_telegram' pelo seu ID do Telegram
             time.sleep(1) 
 
 
