@@ -4,6 +4,9 @@ from reportlab.pdfgen import canvas
 from reportlab.platypus import SimpleDocTemplate, Paragraph, PageBreak
 from reportlab.lib.styles import getSampleStyleSheet
 
+
+
+
 def criar_pdf(listaNoticias):
     autor = "LHRP"  # Defina o autor aqui
     pdf_filename = f"DailyNews_{time.strftime('%Y-%m-%d_%Hh%M')}.pdf"
