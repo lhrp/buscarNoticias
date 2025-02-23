@@ -4,15 +4,15 @@ from datetime import datetime
 import telebot
 
 # Substitua 'SEU_TOKEN' pelo token do seu bot no Telegram
-TELEGRAM_TOKEN = '5354237813:AAG5C7CglIyaGddlNfjmIbJOCs2Zr2gE48M'
-CHAT_ID = '643003849'  # Substitua pelo ID do chat onde deseja receber as mensagens
-WEBSITE_URL = 'https://gadugitax.gadugicontabilidade.com.br'  # Substitua pelo URL do site que deseja verificar
+TELEGRAM_TOKEN = ''
+CHAT_ID = ''  # Substitua pelo ID do chat onde deseja receber as mensagens
+WEBSITE_URL = ''  # Substitua pelo URL do site que deseja verificar
 
 
 def enviaTelagram(mensagem):
     try:
-        telegramToken = "5354237813:AAG5C7CglIyaGddlNfjmIbJOCs2Zr2gE48M"
-        telegramChatID = "643003849"
+        telegramToken = ""
+        telegramChatID = ""
         
         bot = telebot.TeleBot(telegramToken)
         bot.send_message(telegramChatID, mensagem, timeout=5)
